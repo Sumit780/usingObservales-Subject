@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <label for="">UserName</label>
+            <input type="text" class="form-control" [(ngModel)]="uname">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <label for="">Passord</label>
+            <input type="password" class="form-control" [(ngModel)]="pwd">
+            <div *ngIf="loginFail==true">
+                <p class="text-danger">password is incorrect</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="loginUser()">Login<i class="fas fa-cart-plus"></i></button>
+</div>
